@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main-content {
+  background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent overlay */
+  padding: 100px 0;
+  text-align: center;
+  background-image: url("../public//background2.png");
+  height: 80vh;
+  background-repeat: no-repeat;
+  /* background-blend-mode: hard-light; */
+  margin: -10px;
+}
+.search-form {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Add a semi-transparent white background for the form */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: "#0C1A2F";
+}
+
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.options {
+  width: 30em;
+  border: 1px solid silver;
+  border-radius: 1em;
+  background-color: ghostwhite;
+  padding: 0 0 1em 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticks {
+  display: flex;
+}
+
+.o_txt {
+  flex: 1;
+}
+
+.slider {
+  width: 87%; /* manually adjust this to look right */
+  margin: auto;
+  cursor: grab;
+}
+
+.o_on {
+  font-weight: 500;
+  color: blue;
+}
+
+.rwd-table {
+  color: white;
+  border: 1px solid white;
+  width: 30px;
+  border-collapse: collapse;
+  background-color: #142D08;
+  border-color: white;
+}
