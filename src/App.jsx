@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import React from "react";
 import TableauEmbed from "./components/TableauEmbed";
-
+import './App.css'
 
 function App() {
 
@@ -94,7 +94,6 @@ function App() {
           </div>
         </div>
       </div>
-
       <TableauEmbed/>
     </div>
   );
