@@ -5,8 +5,8 @@ import TableauEmbed from "./components/TableauEmbed";
 import { useState } from "react";
 import StationOwner from "./components/StationOwner";
 import L from "leaflet";
-import 'leaflet/dist/leaflet.css';
-import 'leaflet/dist/leaflet.css';
+import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet.css";
 
 function App() {
   const data = [
@@ -386,11 +386,62 @@ function App() {
                   Contact us
                 </a>
               </li>
+              <li className="nav-item">
+                <button
+                  className="nav-link"
+                  onClick={() => {
+                    setActiveTab("StationOwner");
+                  }}
+                >
+                  station view
+                </button>
+              </li>
+              <div class="dropdown">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-bs-theme="dark"
+                  >
+                    Dropdown
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                    style={{ backgroundColor: "#2B3035" }}
+                  >
+                    <li>
+                      {" "}
+                      <button
+                        class="nav-link"
+                        onClick={() => {
+                          setActiveTab("dashboard");
+                        }}
+                      >
+                        Infrastructure
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="nav-link"
+                        onClick={() => {
+                          setActiveTab("StationOwner");
+                        }}
+                      >
+                        station owner
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </div>
             </ul>
           </div>
         </div>
       </nav>
-      {activeTab === "main" ? (
+      {activeTab === "main" && (
         <>
           <div class="main-content">
             <div class="container ">
@@ -461,7 +512,7 @@ function App() {
                             // fontSize: "18px",
                             borderRadius: "5px",
                             border: "1px solid black",
-                            width: "100px"
+                            width: "100px",
                           }}
                         >
                           <tr>
@@ -715,9 +766,9 @@ function App() {
             </div>
           </div>
         </>
-      ) : (
-        <TableauEmbed />
       )}
+      {activeTab === "dashboard" && <TableauEmbed />}
+      {activeTab === "StationOwner" && <StationOwner />}
     </div>
   );
 }

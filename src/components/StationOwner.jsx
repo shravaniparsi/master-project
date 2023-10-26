@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 const { tableau } = window;
 
-function TableauEmbed() {
+function StationOwner() {
   const ref = useRef(null);
   const url =
     "https://public.tableau.com/views/EvSalesDemand/StationMasterDashboard?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link";
@@ -23,4 +23,4 @@ function TableauEmbed() {
   );
 }
 
-export default TableauEmbed;
+export default StationOwner;
