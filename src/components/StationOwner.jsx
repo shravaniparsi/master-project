@@ -19,7 +19,7 @@ function StationOwner() {
   }, []);
 
   return (
-    <div ref={ref} className="dashboard" style={{ padding: "45px" }}></div>
+    <div ref={ref} className="dashboard" style={{ padding: "75px" }}></div>
   );
 }
 

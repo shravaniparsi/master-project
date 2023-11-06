@@ -338,6 +338,67 @@ function App() {
           </a>
         </div>
       </nav>
+      <nav class="main-menu">
+        <ul>
+          <li>
+            <a href="/">
+              <i class="fa fa-home fa-2x"></i>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li class="has-subnav">
+            <button className="nav-link">
+              <i class="fa fa-globe fa-2x"></i>
+              <span
+                class="nav-text"
+                onClick={() => {
+                  setActiveTab("dashboard");
+                }}
+              >
+                Infrastructure Dashboard
+              </span>
+            </button>
+          </li>
+          <li class="has-subnav">
+            <button
+              className="nav-link"
+              onClick={() => {
+                setActiveTab("StationOwner");
+              }}
+            >
+              <i class="fa fa-comments fa-2x"></i>
+              <span class="nav-text">Station Dashboard</span>
+            </button>
+          </li>
+          <li class="has-subnav">
+            <a href="/">
+              <i class="fa fa-camera-retro fa-2x"></i>
+              <span class="nav-text">Github</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-film fa-2x"></i>
+              <span class="nav-text">About us</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-book fa-2x"></i>
+              <span class="nav-text">Contact us</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout">
+          <li>
+            <a href="#">
+              <i class="fa fa-power-off fa-2x"></i>
+              <span class="nav-text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <nav
         class="navbar navbar-expand-lg bg-body-tertiary"
         data-bs-theme="dark"
@@ -354,91 +415,6 @@ function App() {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/">
-                  Home
-                </a>
-              </li>
-              <li>
-                <button
-                  class="nav-link"
-                  onClick={() => {
-                    setActiveTab("dashboard");
-                  }}
-                >
-                  Dashboard
-                </button>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">
-                  Github
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">
-                  About
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">
-                  Contact us
-                </a>
-              </li>
-              <li className="nav-item">
-                <button
-                  className="nav-link"
-                  onClick={() => {
-                    setActiveTab("StationOwner");
-                  }}
-                >
-                  station view
-                </button>
-              </li>
-              <div class="dropdown">
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    data-bs-theme="dark"
-                  >
-                    Dropdown
-                  </a>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdown"
-                    style={{ backgroundColor: "#2B3035" }}
-                  >
-                    <li>
-                      {" "}
-                      <button
-                        class="nav-link"
-                        onClick={() => {
-                          setActiveTab("dashboard");
-                        }}
-                      >
-                        Infrastructure
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        className="nav-link"
-                        onClick={() => {
-                          setActiveTab("StationOwner");
-                        }}
-                      >
-                        station owner
-                      </button>
-                    </li>
-                  </ul>
-                </li>
-              </div>
-            </ul>
-          </div>
         </div>
       </nav>
       {activeTab === "main" && (
