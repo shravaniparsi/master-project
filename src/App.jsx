@@ -4,6 +4,7 @@ import React from "react";
 import TableauEmbed from "./components/TableauEmbed";
 import { useState } from "react";
 import StationOwner from "./components/StationOwner";
+import Location from "./components/Location";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/leaflet.css";
@@ -368,6 +369,17 @@ function App() {
             >
               <i class="fa fa-comments fa-2x"></i>
               <span class="nav-text">Station Dashboard</span>
+            </button>
+          </li>
+          <li class="has-subnav">
+            <button
+              className="nav-link"
+              onClick={() => {
+                setActiveTab("Location");
+              }}
+            >
+              <i class="fa fa-comments fa-2x"></i>
+              <span class="nav-text">City Dashboard</span>
             </button>
           </li>
           <li class="has-subnav">
@@ -745,6 +757,7 @@ function App() {
       )}
       {activeTab === "dashboard" && <TableauEmbed />}
       {activeTab === "StationOwner" && <StationOwner />}
+      {activeTab === "Location" && <Location />}
     </div>
   );
 }
