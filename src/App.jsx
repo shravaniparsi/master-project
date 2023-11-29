@@ -6,6 +6,7 @@ import { useState } from "react";
 import StationOwner from "./components/StationOwner";
 import Location from "./components/Location";
 import L from "leaflet";
+import { Link } from 'react-router-dom';
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/leaflet.css";
 
@@ -335,7 +336,7 @@ function App() {
       <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            Heading
+            EV Charging Infrastructure Dashboard
           </a>
         </div>
       </nav>
@@ -437,7 +438,7 @@ function App() {
                 <div class="col-md-6 offset-md-3">
                   <div class="search-form animate__animated animate__fadeIn">
                     <p>
-                      Enter your pincode below to predict future charging
+                      Enter your City below to predict future charging
                       station locations
                     </p>
                     <form>
@@ -445,31 +446,20 @@ function App() {
                         <input
                           type="text"
                           class="form-control"
-                          placeholder="Enter Pincode"
-                          aria-label="Enter Pincode"
+                          placeholder="Enter City"
+                          aria-label="Enter City"
                           aria-describedby="search-button"
                         />
                       </div>
                       <div className="input-group mb-3">
-                        <label for="customRange3" class="form-label">
-                          Example range
-                        </label>
-                        <input
-                          type="range"
-                          className="form-range slider"
-                          min="0"
-                          max="1"
-                          step="0.25"
-                          id="customRange3"
-                        />
-                      </div>
-                      <div className="input-group mb-3">
+
                         <button
                           type="button"
                           class="btn btn-outline-primary text-center"
                         >
-                          Predict
+                          Search
                         </button>
+
                       </div>
                     </form>
                   </div>
@@ -497,7 +487,6 @@ function App() {
                         <table
                           style={{
                             borderCollapse: "collapse",
-                            // fontSize: "18px",
                             borderRadius: "5px",
                             border: "1px solid black",
                             width: "100px",
@@ -741,13 +730,10 @@ function App() {
     </div> */}
                   <p className="text-info fw-bold">Summary</p>
                   <p className="text-primary fw-bold">
-                    Total number of Predictions: xx
+                    Total number of New Charging Stations for year 2024: 5 
                   </p>
                   <p className="text-success fw-bold">
-                    Total number of Strong Predictions: xx
-                  </p>
-                  <p className="text-danger fw-bold">
-                    Total number of Weak Predictions: xx
+                    Total number of new Charging Points for year 2024: 83
                   </p>
                 </div>
               </div>
